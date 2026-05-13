@@ -15,6 +15,8 @@ server: server.o
 client: client.o
 	$(CC) $(LDFLAGS) $^ -o $@
 
+$(OBJS): common.h
+
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
